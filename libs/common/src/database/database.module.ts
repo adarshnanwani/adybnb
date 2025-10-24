@@ -3,7 +3,6 @@ import { ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '../config/config.module';
 
-// TODO - add zod schema for env files
 @Module({
   imports: [
     MongooseModule.forRootAsync({
