@@ -1,22 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/adybnb/src",
+  "sourceRoot": "apps/reservations/src",
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/adybnb/tsconfig.app.json"
+    "tsConfigPath": "apps/reservations/tsconfig.app.json"
   },
   "projects": {
-    "adybnb": {
-      "type": "application",
-      "root": "apps/adybnb",
-      "entryFile": "main",
-      "sourceRoot": "apps/adybnb/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/adybnb/tsconfig.app.json"
-      }
-    },
     "common": {
       "type": "library",
       "root": "libs/common",
@@ -37,5 +28,5 @@
     }
   },
   "monorepo": true,
-  "root": "apps/adybnb"
+  "root": "apps/reservations"
 }
