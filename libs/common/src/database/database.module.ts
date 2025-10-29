@@ -1,13 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ModelDefinition, MongooseModule } from '@nestjs/mongoose';
-import { ConfigModule } from '../config/config.module';
 
 @Module({
   imports: [
     MongooseModule.forRootAsync({
-      // forRootAsync makes usre these dependencies are loaded before this module loads
-      imports: [ConfigModule],
+      // forRootAsync makes sure these dependencies are loaded before this module loads
       useFactory: (configService: ConfigService) => ({
         uri: configService.get('MONGODB_URI'),
       }),
